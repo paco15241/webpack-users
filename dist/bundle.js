@@ -128,7 +128,19 @@ eval("\n\n/**\n * When source maps are enabled, `style-loader` uses a link eleme
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! ./scss/index.scss */ \"./src/scss/index.scss\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvaW5kZXguanM/YjYzNSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBIiwiZmlsZSI6Ii4vc3JjL2luZGV4LmpzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFwiLi9zY3NzL2luZGV4LnNjc3NcIjsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/index.js\n");
+eval("\n\n__webpack_require__(/*! ./scss/index.scss */ \"./src/scss/index.scss\");\n\n__webpack_require__(/*! ./js/usersIndex */ \"./src/js/usersIndex.js\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvaW5kZXguanM/YjYzNSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBOztBQUNBIiwiZmlsZSI6Ii4vc3JjL2luZGV4LmpzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFwiLi9zY3NzL2luZGV4LnNjc3NcIjtcclxuaW1wb3J0IFwiLi9qcy91c2Vyc0luZGV4XCI7Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/index.js\n");
+
+/***/ }),
+
+/***/ "./src/js/usersIndex.js":
+/*!******************************!*\
+  !*** ./src/js/usersIndex.js ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n$(function () {\n  $.ajax({\n    url: '//localhost:3000/users',\n    method: 'GET'\n  }).done(function (users) {\n    //console.log(users);\n    users.forEach(function (user, index) {\n      var userContent = '\\n      <tr>\\n        <th scope=\"row\">' + (index + 1) + '</th>\\n        <td>' + user.name + '</td>\\n        <td>' + user.email + '</td>\\n        <td>' + user.birthday + '</td>\\n        <td>\\n          <a href=\"#\" class=\"btn btn-info\">\\u7DE8\\u8F2F</a>\\n          <a href=\"#\" class=\"btn btn-danger\">\\u522A\\u9664</a>\\n        </td>\\n      </tr>\\n      ';\n\n      $('#usersRow').append(userContent);\n    });\n  });\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvanMvdXNlcnNJbmRleC5qcz9mMGUwIl0sIm5hbWVzIjpbIiQiLCJhamF4IiwidXJsIiwibWV0aG9kIiwiZG9uZSIsInVzZXJzIiwiZm9yRWFjaCIsInVzZXIiLCJpbmRleCIsInVzZXJDb250ZW50IiwibmFtZSIsImVtYWlsIiwiYmlydGhkYXkiLCJhcHBlbmQiXSwibWFwcGluZ3MiOiI7O0FBQUFBLEVBQUUsWUFBVTtBQUNWQSxJQUFFQyxJQUFGLENBQU87QUFDTEMsU0FBSyx3QkFEQTtBQUVMQyxZQUFRO0FBRkgsR0FBUCxFQUdHQyxJQUhILENBR1EsVUFBQ0MsS0FBRCxFQUFXO0FBQ2pCO0FBQ0FBLFVBQU1DLE9BQU4sQ0FBYyxVQUFDQyxJQUFELEVBQU9DLEtBQVAsRUFBaUI7QUFDN0IsVUFBTUMsMERBRWVELFFBQVEsQ0FGdkIsNEJBR0dELEtBQUtHLElBSFIsMkJBSUdILEtBQUtJLEtBSlIsMkJBS0dKLEtBQUtLLFFBTFIsd0xBQU47O0FBYUFaLFFBQUUsV0FBRixFQUFlYSxNQUFmLENBQXNCSixXQUF0QjtBQUVELEtBaEJEO0FBaUJELEdBdEJEO0FBdUJELENBeEJEIiwiZmlsZSI6Ii4vc3JjL2pzL3VzZXJzSW5kZXguanMuanMiLCJzb3VyY2VzQ29udGVudCI6WyIkKGZ1bmN0aW9uKCl7XHJcbiAgJC5hamF4KHtcclxuICAgIHVybDogJy8vbG9jYWxob3N0OjMwMDAvdXNlcnMnLFxyXG4gICAgbWV0aG9kOiAnR0VUJ1xyXG4gIH0pLmRvbmUoKHVzZXJzKSA9PiB7XHJcbiAgICAvL2NvbnNvbGUubG9nKHVzZXJzKTtcclxuICAgIHVzZXJzLmZvckVhY2goKHVzZXIsIGluZGV4KSA9PiB7XHJcbiAgICAgIGNvbnN0IHVzZXJDb250ZW50ID0gYFxyXG4gICAgICA8dHI+XHJcbiAgICAgICAgPHRoIHNjb3BlPVwicm93XCI+JHsgaW5kZXggKyAxIH08L3RoPlxyXG4gICAgICAgIDx0ZD4keyB1c2VyLm5hbWUgfTwvdGQ+XHJcbiAgICAgICAgPHRkPiR7IHVzZXIuZW1haWwgfTwvdGQ+XHJcbiAgICAgICAgPHRkPiR7IHVzZXIuYmlydGhkYXkgfTwvdGQ+XHJcbiAgICAgICAgPHRkPlxyXG4gICAgICAgICAgPGEgaHJlZj1cIiNcIiBjbGFzcz1cImJ0biBidG4taW5mb1wiPue3qOi8rzwvYT5cclxuICAgICAgICAgIDxhIGhyZWY9XCIjXCIgY2xhc3M9XCJidG4gYnRuLWRhbmdlclwiPuWIqumZpDwvYT5cclxuICAgICAgICA8L3RkPlxyXG4gICAgICA8L3RyPlxyXG4gICAgICBgO1xyXG5cclxuICAgICAgJCgnI3VzZXJzUm93JykuYXBwZW5kKHVzZXJDb250ZW50KTtcclxuXHJcbiAgICB9KTtcclxuICB9KTtcclxufSk7Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/js/usersIndex.js\n");
 
 /***/ }),
 
