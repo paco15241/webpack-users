@@ -19,11 +19,13 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "src", "html", "index.html"),
-      filename: path.resolve(__dirname, "dist", "index.html")
+      filename: path.resolve(__dirname, "dist", "index.html"),
+      title: "主控臺"
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "src", "html", "users", "index.html"),
-      filename: path.resolve(__dirname, "dist", "users", "index.html")
+      filename: path.resolve(__dirname, "dist", "users", "index.html"),
+      title: "使用者管理"
     })
   ],
   module: {
@@ -45,6 +47,10 @@ module.exports = {
           'css-loader',
           'sass-loader'
         ]
+      },
+      {
+        test: /\.ejs$/,
+        loader: 'ejs-loader'
       }
     ]
   }
