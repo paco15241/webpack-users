@@ -128,7 +128,19 @@ eval("\n\n/**\n * When source maps are enabled, `style-loader` uses a link eleme
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! ./scss/index.scss */ \"./src/scss/index.scss\");\n\n__webpack_require__(/*! ./js/usersIndex */ \"./src/js/usersIndex.js\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvaW5kZXguanM/YjYzNSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBOztBQUNBIiwiZmlsZSI6Ii4vc3JjL2luZGV4LmpzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFwiLi9zY3NzL2luZGV4LnNjc3NcIjtcclxuaW1wb3J0IFwiLi9qcy91c2Vyc0luZGV4XCI7Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/index.js\n");
+eval("\n\n__webpack_require__(/*! ./scss/index.scss */ \"./src/scss/index.scss\");\n\n__webpack_require__(/*! ./js/usersIndex */ \"./src/js/usersIndex.js\");\n\n__webpack_require__(/*! ./js/usersCreate */ \"./src/js/usersCreate.js\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvaW5kZXguanM/YjYzNSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBOztBQUNBOztBQUNBIiwiZmlsZSI6Ii4vc3JjL2luZGV4LmpzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFwiLi9zY3NzL2luZGV4LnNjc3NcIjtcclxuaW1wb3J0IFwiLi9qcy91c2Vyc0luZGV4XCI7XHJcbmltcG9ydCBcIi4vanMvdXNlcnNDcmVhdGVcIjsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/index.js\n");
+
+/***/ }),
+
+/***/ "./src/js/usersCreate.js":
+/*!*******************************!*\
+  !*** ./src/js/usersCreate.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n$(function () {\n  $(\"#createUserBtn\").on(\"click\", function (e) {\n    e.preventDefault();\n    $.ajax({\n      url: \"//localhost:3000/users\",\n      type: \"POST\",\n      data: $(\"#newUserForm\").serialize(),\n      dataType: \"json\"\n    }).done(function (data) {\n      // console.log(data)\n      window.location = 'http://localhost:4000/users/index.html';\n    });\n  });\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvanMvdXNlcnNDcmVhdGUuanM/NTg0ZiJdLCJuYW1lcyI6WyIkIiwib24iLCJlIiwicHJldmVudERlZmF1bHQiLCJhamF4IiwidXJsIiwidHlwZSIsImRhdGEiLCJzZXJpYWxpemUiLCJkYXRhVHlwZSIsImRvbmUiLCJ3aW5kb3ciLCJsb2NhdGlvbiJdLCJtYXBwaW5ncyI6Ijs7QUFBQUEsRUFBRSxZQUFXO0FBQ1hBLElBQUUsZ0JBQUYsRUFBb0JDLEVBQXBCLENBQXVCLE9BQXZCLEVBQWdDLFVBQVNDLENBQVQsRUFBWTtBQUMxQ0EsTUFBRUMsY0FBRjtBQUNBSCxNQUFFSSxJQUFGLENBQU87QUFDTEMsV0FBSyx3QkFEQTtBQUVMQyxZQUFNLE1BRkQ7QUFHTEMsWUFBTVAsRUFBRSxjQUFGLEVBQWtCUSxTQUFsQixFQUhEO0FBSUxDLGdCQUFVO0FBSkwsS0FBUCxFQUtHQyxJQUxILENBS1EsVUFBQ0gsSUFBRCxFQUFVO0FBQ2hCO0FBQ0FJLGFBQU9DLFFBQVAsR0FBa0Isd0NBQWxCO0FBQ0QsS0FSRDtBQVNELEdBWEQ7QUFZRCxDQWJEIiwiZmlsZSI6Ii4vc3JjL2pzL3VzZXJzQ3JlYXRlLmpzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiJChmdW5jdGlvbigpIHtcclxuICAkKFwiI2NyZWF0ZVVzZXJCdG5cIikub24oXCJjbGlja1wiLCBmdW5jdGlvbihlKSB7XHJcbiAgICBlLnByZXZlbnREZWZhdWx0KCk7XHJcbiAgICAkLmFqYXgoe1xyXG4gICAgICB1cmw6IFwiLy9sb2NhbGhvc3Q6MzAwMC91c2Vyc1wiLFxyXG4gICAgICB0eXBlOiBcIlBPU1RcIixcclxuICAgICAgZGF0YTogJChcIiNuZXdVc2VyRm9ybVwiKS5zZXJpYWxpemUoKSxcclxuICAgICAgZGF0YVR5cGU6IFwianNvblwiLFxyXG4gICAgfSkuZG9uZSgoZGF0YSkgPT4ge1xyXG4gICAgICAvLyBjb25zb2xlLmxvZyhkYXRhKVxyXG4gICAgICB3aW5kb3cubG9jYXRpb24gPSAnaHR0cDovL2xvY2FsaG9zdDo0MDAwL3VzZXJzL2luZGV4Lmh0bWwnO1xyXG4gICAgfSk7XHJcbiAgfSlcclxufSk7XHJcbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/js/usersCreate.js\n");
 
 /***/ }),
 
