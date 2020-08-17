@@ -8,6 +8,10 @@ $(function() {
     }).done((data) => {
       // console.log(data);
 
+      let message = "刪除成功！"
+      $('#alertContent').text(message);
+      $('#alertBlock').show();
+
       // 移除指定使用者的 tr
       $(this).parents('tr').remove();
     });
